@@ -47,8 +47,8 @@ Entity.prototype._toJSON = function() {
 // random position
 Entity.prototype.randPos = function() {
 	var area = this.dataApiUtil.area().findById(this.areaId);
-	this.x = this.utils.rand(50, area.width - 50);
-	this.y = this.utils.rand(50, area.height - 50);
+	this.x = this.utils.rand(-area.width /2 + 50, area.width / 2 - 50);
+	this.y = this.utils.rand(-area.height /2 + 50, area.height / 2 - 50);
 	// this.dataApiUtil = null; // to be serialized
 };
 
